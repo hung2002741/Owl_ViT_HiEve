@@ -1,0 +1,21 @@
+data:
+  images_path: E:/HiEve/videos/HIE20/images
+  # images_path: E:/OwL-ViT/data/images
+  annotations_file: E:/OwL-ViT/data/instances_minitrain2017.json
+  num_train_images:  200
+  num_test_images: 20
+
+training:
+  n_epochs: 1
+  learning_rate: 1e-4
+  save_eval_images: true
+  use_class_weight: true 
+  class_loss_coef: 0.5
+  bbox_loss_coef: 1
+  giou_loss_coef: 0.2
+  weight_decay: 0.01  # default
+  confidence_threshold: 0.1
+  iou_threshold: 0.45  # For nms
+  # NOTE: Use these values for benchmarking to stay consistent with YOLO, fasterRCNN, SSD, DETR,... etc
+  #   confidence_threshold: 0.01  
+  #   iou_threshold: 0.45
